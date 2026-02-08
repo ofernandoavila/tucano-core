@@ -13,7 +13,7 @@ $ composer create-project ofernandoavila/tucano <your-plugin-name>
 or add on existing project:
 
 ```bash
-$ composer require ofernandoavila/tucano_core
+$ composer require ofernandoavila/tucano-core
 ```
 
 ## Commands
