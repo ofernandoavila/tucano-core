@@ -1,0 +1,27 @@
+{
+    "name": "ofernandoavila/tucano-core",
+    "version": "0.0.1",
+    "description": "Main library to start create wordpress plugins quickly.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Ofernandoavila\\TucanoCore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fernando Avila"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^12.43",
+        "vlucas/phpdotenv": "^5.6",
+        "illuminate/events": "^12.47",
+        "ramsey/uuid": "^4.9",
+        "illuminate/pagination": "^12.46",
+        "illuminate/console": "^12.47",
+        "illuminate/container": "^12.47"
+    }
+}
