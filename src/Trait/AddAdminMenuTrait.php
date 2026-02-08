@@ -4,7 +4,7 @@ namespace Ofernandoavila\TucanoCore\Trait;
 
 trait AddAdminMenuTrait
 {
-    protected function add_menu(array $menu = [])
+    protected function addAdminMenu(array $menu = [])
     {
         add_action('admin_menu', function () use ($menu) {
             $slug = sanitize_title($menu['nome']) . '-admin-menu';

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Model;
 
-class ##{{ name }}## extends Model
+use Ofernandoavila\TucanoCore\Core\Model;
+
+class ##{{NAME}}## extends Model
 {
-    protected $table = '##{{ table_name }}##';
+    protected $table = '##{{TABLE_NAME}}##';
 
     protected $primaryKey = 'id';
     protected $keyType = 'string';

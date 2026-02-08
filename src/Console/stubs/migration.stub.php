@@ -7,10 +7,9 @@ return new class
 {
     public function Up()
     {
-        if (!Capsule::schema()->hasTable("##{{ table_name }}##")) {
-            Capsule::schema()->create("##{{ table_name }}##", function (Blueprint $table) {
+        if (!Capsule::schema()->hasTable("##{{TABLE_NAME}}##")) {
+            Capsule::schema()->create("##{{TABLE_NAME}}##", function (Blueprint $table) {
                 $table->uuid("id")->primary(true);
-                $table->boolean("ativo")->nullable()->default(true);
                 $table->timestamps();
             });
         }
@@ -18,6 +17,6 @@ return new class
 
     public function Down()
     {
-        return Capsule::schema()->dropIfExists("##{{ table_name }}##");
+        return Capsule::schema()->dropIfExists("##{{TABLE_NAME}}##");
     }
 };

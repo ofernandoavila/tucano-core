@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d633fc74bc825a36f3b493a076164b5",
+    "content-hash": "4351134444025117c8b7c1a299874f65",
     "packages": [
         {
             "name": "brick/math",
@@ -447,72 +447,6 @@
             "time": "2025-05-13T15:08:45+00:00"
         },
         {
-            "name": "illuminate/console",
-            "version": "v12.50.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/console.git",
-                "reference": "fa1b3774e951bd7eb102bf5099a03a0a4ea35468"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/fa1b3774e951bd7eb102bf5099a03a0a4ea35468",
-                "reference": "fa1b3774e951bd7eb102bf5099a03a0a4ea35468",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "illuminate/collections": "^12.0",
-                "illuminate/contracts": "^12.0",
-                "illuminate/macroable": "^12.0",
-                "illuminate/support": "^12.0",
-                "illuminate/view": "^12.0",
-                "laravel/prompts": "^0.3.0",
-                "nunomaduro/termwind": "^2.0",
-                "php": "^8.2",
-                "symfony/console": "^7.2.0",
-                "symfony/polyfill-php83": "^1.33",
-                "symfony/process": "^7.2.0"
-            },
-            "suggest": {
-                "dragonmantank/cron-expression": "Required to use scheduler (^3.3.2).",
-                "ext-pcntl": "Required to use signal trapping.",
-                "guzzlehttp/guzzle": "Required to use the ping methods on schedules (^7.8).",
-                "illuminate/bus": "Required to use the scheduled job dispatcher (^12.0).",
-                "illuminate/container": "Required to use the scheduler (^12.0).",
-                "illuminate/filesystem": "Required to use the generator command (^12.0).",
-                "illuminate/queue": "Required to use closures for scheduled jobs (^12.0)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "12.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Console\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Console package.",
-            "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2026-02-01T02:54:43+00:00"
-        },
-        {
             "name": "illuminate/container",
             "version": "v12.50.0",
             "source": {
@@ -748,73 +682,6 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2026-01-28T15:18:32+00:00"
-        },
-        {
-            "name": "illuminate/filesystem",
-            "version": "v12.50.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "8cad07cf6004a7cd0a876c6ad2136a1511c2bb58"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/8cad07cf6004a7cd0a876c6ad2136a1511c2bb58",
-                "reference": "8cad07cf6004a7cd0a876c6ad2136a1511c2bb58",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/collections": "^12.0",
-                "illuminate/contracts": "^12.0",
-                "illuminate/macroable": "^12.0",
-                "illuminate/support": "^12.0",
-                "php": "^8.2",
-                "symfony/finder": "^7.2.0"
-            },
-            "suggest": {
-                "ext-fileinfo": "Required to use the Filesystem class.",
-                "ext-ftp": "Required to use the Flysystem FTP driver.",
-                "ext-hash": "Required to use the Filesystem class.",
-                "illuminate/http": "Required for handling uploaded files (^12.0).",
-                "league/flysystem": "Required to use the Flysystem local driver (^3.25.1).",
-                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^3.25.1).",
-                "league/flysystem-ftp": "Required to use the Flysystem FTP driver (^3.25.1).",
-                "league/flysystem-sftp-v3": "Required to use the Flysystem SFTP driver (^3.25.1).",
-                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
-                "symfony/filesystem": "Required to enable support for relative symbolic links (^7.2).",
-                "symfony/mime": "Required to enable support for guessing extensions (^7.2)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "12.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "functions.php"
-                ],
-                "psr-4": {
-                    "Illuminate\\Filesystem\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Filesystem package.",
-            "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2026-01-19T15:15:34+00:00"
         },
         {
             "name": "illuminate/macroable",
@@ -1096,119 +963,6 @@
             "time": "2026-02-04T15:14:59+00:00"
         },
         {
-            "name": "illuminate/view",
-            "version": "v12.50.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/view.git",
-                "reference": "5b3d7ae07665b98cca46846074edc008ed5e3864"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/5b3d7ae07665b98cca46846074edc008ed5e3864",
-                "reference": "5b3d7ae07665b98cca46846074edc008ed5e3864",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "illuminate/collections": "^12.0",
-                "illuminate/container": "^12.0",
-                "illuminate/contracts": "^12.0",
-                "illuminate/events": "^12.0",
-                "illuminate/filesystem": "^12.0",
-                "illuminate/macroable": "^12.0",
-                "illuminate/support": "^12.0",
-                "php": "^8.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "12.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\View\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate View package.",
-            "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2026-01-20T15:07:29+00:00"
-        },
-        {
-            "name": "laravel/prompts",
-            "version": "v0.3.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/prompts.git",
-                "reference": "4861ded9003b7f8a158176a0b7666f74ee761be8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/4861ded9003b7f8a158176a0b7666f74ee761be8",
-                "reference": "4861ded9003b7f8a158176a0b7666f74ee761be8",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": "^2.2",
-                "ext-mbstring": "*",
-                "php": "^8.1",
-                "symfony/console": "^6.2|^7.0|^8.0"
-            },
-            "conflict": {
-                "illuminate/console": ">=10.17.0 <10.25.0",
-                "laravel/framework": ">=10.17.0 <10.25.0"
-            },
-            "require-dev": {
-                "illuminate/collections": "^10.0|^11.0|^12.0|^13.0",
-                "mockery/mockery": "^1.5",
-                "pestphp/pest": "^2.3|^3.4|^4.0",
-                "phpstan/phpstan": "^1.12.28",
-                "phpstan/phpstan-mockery": "^1.1.3"
-            },
-            "suggest": {
-                "ext-pcntl": "Required for the spinner to be animated."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.3.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Laravel\\Prompts\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Add beautiful and user-friendly forms to your command-line applications.",
-            "support": {
-                "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.12"
-            },
-            "time": "2026-02-03T06:57:26+00:00"
-        },
-        {
             "name": "laravel/serializable-closure",
             "version": "v2.0.9",
             "source": {
@@ -1373,93 +1127,6 @@
                 }
             ],
             "time": "2026-01-29T09:26:29+00:00"
-        },
-        {
-            "name": "nunomaduro/termwind",
-            "version": "v2.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "6fb2a640ff502caace8e05fd7be3b503a7e1c017"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/6fb2a640ff502caace8e05fd7be3b503a7e1c017",
-                "reference": "6fb2a640ff502caace8e05fd7be3b503a7e1c017",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": "^8.2",
-                "symfony/console": "^7.3.6"
-            },
-            "require-dev": {
-                "illuminate/console": "^11.46.1",
-                "laravel/pint": "^1.25.1",
-                "mockery/mockery": "^1.6.12",
-                "pestphp/pest": "^2.36.0 || ^3.8.4 || ^4.1.3",
-                "phpstan/phpstan": "^1.12.32",
-                "phpstan/phpstan-strict-rules": "^1.6.2",
-                "symfony/var-dumper": "^7.3.5",
-                "thecodingmachine/phpstan-strict-rules": "^1.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Termwind\\Laravel\\TermwindServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/Functions.php"
-                ],
-                "psr-4": {
-                    "Termwind\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nuno Maduro",
-                    "email": "enunomaduro@gmail.com"
-                }
-            ],
-            "description": "Its like Tailwind CSS, but for the console.",
-            "keywords": [
-                "cli",
-                "console",
-                "css",
-                "package",
-                "php",
-                "style"
-            ],
-            "support": {
-                "issues": "https://github.com/nunomaduro/termwind/issues",
-                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.3"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.com/paypalme/enunomaduro",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/nunomaduro",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/xiCO2k",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-11-20T02:34:59+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -1921,47 +1588,39 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.4.4",
+            "version": "v8.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "41e38717ac1dd7a46b6bda7d6a82af2d98a78894"
+                "reference": "ace03c4cf9805080ff40cbeec69fca180c339a3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/41e38717ac1dd7a46b6bda7d6a82af2d98a78894",
-                "reference": "41e38717ac1dd7a46b6bda7d6a82af2d98a78894",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ace03c4cf9805080ff40cbeec69fca180c339a3b",
+                "reference": "ace03c4cf9805080ff40cbeec69fca180c339a3b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/polyfill-mbstring": "~1.0",
+                "php": ">=8.4",
+                "symfony/polyfill-mbstring": "^1.0",
                 "symfony/service-contracts": "^2.5|^3",
-                "symfony/string": "^7.2|^8.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<6.4",
-                "symfony/dotenv": "<6.4",
-                "symfony/event-dispatcher": "<6.4",
-                "symfony/lock": "<6.4",
-                "symfony/process": "<6.4"
+                "symfony/string": "^7.4|^8.0"
             },
             "provide": {
                 "psr/log-implementation": "1.0|2.0|3.0"
             },
             "require-dev": {
                 "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0|^8.0",
-                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
-                "symfony/event-dispatcher": "^6.4|^7.0|^8.0",
-                "symfony/http-foundation": "^6.4|^7.0|^8.0",
-                "symfony/http-kernel": "^6.4|^7.0|^8.0",
-                "symfony/lock": "^6.4|^7.0|^8.0",
-                "symfony/messenger": "^6.4|^7.0|^8.0",
-                "symfony/process": "^6.4|^7.0|^8.0",
-                "symfony/stopwatch": "^6.4|^7.0|^8.0",
-                "symfony/var-dumper": "^6.4|^7.0|^8.0"
+                "symfony/config": "^7.4|^8.0",
+                "symfony/dependency-injection": "^7.4|^8.0",
+                "symfony/event-dispatcher": "^7.4|^8.0",
+                "symfony/http-foundation": "^7.4|^8.0",
+                "symfony/http-kernel": "^7.4|^8.0",
+                "symfony/lock": "^7.4|^8.0",
+                "symfony/messenger": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0",
+                "symfony/stopwatch": "^7.4|^8.0",
+                "symfony/var-dumper": "^7.4|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -1995,7 +1654,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.4.4"
+                "source": "https://github.com/symfony/console/tree/v8.0.4"
             },
             "funding": [
                 {
@@ -2015,7 +1674,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-13T11:36:38+00:00"
+            "time": "2026-01-13T13:06:50+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -2083,74 +1742,6 @@
                 }
             ],
             "time": "2024-09-25T14:21:43+00:00"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v7.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "ad4daa7c38668dcb031e63bc99ea9bd42196a2cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/ad4daa7c38668dcb031e63bc99ea9bd42196a2cb",
-                "reference": "ad4daa7c38668dcb031e63bc99ea9bd42196a2cb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "symfony/filesystem": "^6.4|^7.0|^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Finds files and directories via an intuitive fluent interface",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.4.5"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-01-26T15:07:59+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2812,71 +2403,6 @@
             "time": "2025-06-23T16:12:55+00:00"
         },
         {
-            "name": "symfony/process",
-            "version": "v7.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "608476f4604102976d687c483ac63a79ba18cc97"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/608476f4604102976d687c483ac63a79ba18cc97",
-                "reference": "608476f4604102976d687c483ac63a79ba18cc97",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Process\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Executes commands in sub-processes",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/process/tree/v7.4.5"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-01-26T15:07:59+00:00"
-        },
-        {
             "name": "symfony/service-contracts",
             "version": "v3.6.1",
             "source": {
@@ -3227,6 +2753,81 @@
                 }
             ],
             "time": "2025-07-15T13:41:35+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v8.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "7a1a90ba1df6e821a6b53c4cabdc32a56cabfb14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7a1a90ba1df6e821a6b53c4cabdc32a56cabfb14",
+                "reference": "7a1a90ba1df6e821a6b53c4cabdc32a56cabfb14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<7.4"
+            },
+            "require-dev": {
+                "symfony/console": "^7.4|^8.0"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v8.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-12-04T18:17:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

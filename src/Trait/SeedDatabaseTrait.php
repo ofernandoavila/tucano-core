@@ -4,7 +4,7 @@ namespace Ofernandoavila\TucanoCore\Trait;
 
 trait SeedDatabaseTrait
 {
-    protected static function save_registers(array $registers, string $model)
+    protected static function save(array $registers, string $model)
     {
         foreach ($registers as $register) {
 

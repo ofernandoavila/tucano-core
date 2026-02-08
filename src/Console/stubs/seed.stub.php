@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\##{{ model }}##;
+use App\Model\##{{NAME}}##;
 use Ofernandoavila\TucanoCore\Trait\SeedDatabaseTrait;
 
 return new class
@@ -9,9 +9,9 @@ return new class
     
     public function seed()
     {
-        return self::save_registers([
+        return self::save([
             // Add data here...
 
-        ], ##{{ model }}##::class);
+        ], ##{{NAME}}##::class);
     }
 };

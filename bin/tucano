@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+use Ofernandoavila\TucanoCore\Console\Console;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+
+$root = explode('/', __DIR__);
+array_pop($root);
+array_shift($root);
+
+$console = new Console('/' . implode('/', $root));
+echo PHP_EOL;
+$console->run();
