@@ -93,7 +93,9 @@ class InitCommand extends Command
         }
         $output->writeln('Project folders created!');
 
-        shell_exec("cp " . __DIR__ . "/../stubs/components " . __DIR__ . "/../../.. -R");
+        shell_exec("cp " . $this->rootPath . "/.env.example " . $this->rootPath . "/.env");
+
+        shell_exec("cp " . __DIR__ . "/../stubs/components " . $this->rootPath . " -R");
 
         $output->writeln('Installing dependencies...');
         $output->writeln('');

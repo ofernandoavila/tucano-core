@@ -15,7 +15,7 @@ final class Config
     private function loadConfigFile()
     {
         if (!file_exists($this->rootPath . '/config.php')) {
-            throw new \Exception("Config file not found. Create a config.php file in root project");
+            return require __DIR__ . '/../Console/stubs/config.stub.php';
         }
 
         return require $this->rootPath . '/config.php';

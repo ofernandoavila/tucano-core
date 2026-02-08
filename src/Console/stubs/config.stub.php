@@ -13,10 +13,10 @@ return [
     'database' => [
         'table_prefix' => '',
         'driver'    => 'mysql',
-        'host'      => DB_HOST,
-        'database'  => DB_NAME,
-        'user'  => DB_USER,
-        'password'  => DB_PASSWORD
+        'host'      => '',
+        'database'  => '',
+        'user'  => '',
+        'password'  => ''
     ],
 
     // Web Components config
