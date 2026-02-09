@@ -14,6 +14,6 @@ class Shortcode
         protected string $shortcode,
         callable $callback
     ) {
-        //add_shortcode($this->shortcode, $callback);
+        add_shortcode($this->shortcode, $callback);
     }
 }
