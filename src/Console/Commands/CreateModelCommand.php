@@ -22,13 +22,13 @@ class CreateModelCommand extends Command
     {
         $this->setDescription('Create a new model');
         $this->addArgument('name', InputArgument::REQUIRED);
-        $this->addArgument('table_name', InputArgument::REQUIRED);
+        $this->addArgument('tableName', InputArgument::REQUIRED);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $name = $input->getArgument('name');
-        $tableName = $input->getArgument('table_name');
+        $tableName = $input->getArgument('tableName');
 
         $replaces = ['name' => $name, 'table_name' => $tableName];
 
