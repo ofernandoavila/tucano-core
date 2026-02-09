@@ -54,6 +54,7 @@ class Factory
     {
         if (file_exists($this->config->getRoutesPath())) {
             $router = $this->container->resolve(Router::class);
+            $container = $this->container;
             require $this->config->getRoutesPath();
             $router->Publish();
         }

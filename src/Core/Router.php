@@ -11,7 +11,8 @@ class Router
     private bool $isGroupConfig = false;
     private ?string $groupName;
 
-    public function group(string $groupName, mixed $callback) {
+    public function group(string $groupName, mixed $callback)
+    {
         $this->isGroupConfig = true;
         $this->groupName = $groupName;
 
@@ -44,7 +45,7 @@ class Router
 
     private function registerRoute(string $route, string $method, $callback, bool $permision = false)
     {
-        if($this->isGroupConfig)
+        if ($this->isGroupConfig)
             $route = $this->groupName . $route;
 
         return $this->routes[] = ["route" => $route, "method" => $method, "callback" => $callback, 'permision' => $permision];
@@ -54,13 +55,14 @@ class Router
     {
         add_action('rest_api_init', function () {
             foreach ($this->routes as $rota) {
+
                 register_rest_route("$this->endpoint/$this->version", $rota['route'], array(
                     'methods'  => $rota['method'],
                     'callback' => $rota['callback'],
                     'permission_callback' => function () use ($rota) {
                         if ($rota['permision'])
                             return is_user_logged_in();
-        
+
                         return true;
                     }
                 ));
