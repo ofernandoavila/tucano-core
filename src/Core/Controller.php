@@ -22,7 +22,7 @@ class Controller
         if ($perPage == -1)
             return $this->send($this->model::all());
 
-        $query = $this->model::newQuery();
+        $query = $this->model::query();
 
         if (isset($params['id']))
             return $this->getById($params['id']);
