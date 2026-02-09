@@ -11,6 +11,7 @@ use Ofernandoavila\TucanoCore\Console\Commands\CreateSeedCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\CreateShortcodeCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\DatabaseMigrateCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\DatabaseRollbackCommand;
+use Ofernandoavila\TucanoCore\Console\Commands\DatabaseSeedCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\InitCommand;
 use Ofernandoavila\TucanoCore\Core\Config;
 use Ofernandoavila\TucanoCore\Core\Container;
@@ -38,6 +39,7 @@ class Console extends Application
         $this->addCommand(new CreateModelCommand($this->rootPath, $container));
         $this->addCommand(new CreateControllerCommand($this->rootPath, $container));
         $this->addCommand(new CreateEntityCommand($this->rootPath, $container));
+        $this->addCommand(new DatabaseSeedCommand($this->rootPath, $container));
         $this->addCommand(new DatabaseMigrateCommand($this->rootPath, $container));
         $this->addCommand(new DatabaseRollbackCommand($this->rootPath, $container));
     }
