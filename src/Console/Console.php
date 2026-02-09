@@ -4,6 +4,7 @@ namespace Ofernandoavila\TucanoCore\Console;
 
 use Ofernandoavila\TucanoCore\Console\Commands\BuildAngularCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\CreateControllerCommand;
+use Ofernandoavila\TucanoCore\Console\Commands\CreateEntityCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\CreateMigrationCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\CreateModelCommand;
 use Ofernandoavila\TucanoCore\Console\Commands\CreateSeedCommand;
@@ -36,6 +37,7 @@ class Console extends Application
         $this->addCommand(new CreateSeedCommand($this->rootPath, $container));
         $this->addCommand(new CreateModelCommand($this->rootPath, $container));
         $this->addCommand(new CreateControllerCommand($this->rootPath, $container));
+        $this->addCommand(new CreateEntityCommand($this->rootPath, $container));
         $this->addCommand(new DatabaseMigrateCommand($this->rootPath, $container));
         $this->addCommand(new DatabaseRollbackCommand($this->rootPath, $container));
     }

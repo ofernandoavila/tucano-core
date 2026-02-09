@@ -21,17 +21,20 @@ class CreateMigrationCommand extends Command
     protected function configure(): void
     {
         $this->setDescription('Create a new migration');
-        $this->addArgument('name', InputArgument::REQUIRED);
+        $this->addArgument('table_name', InputArgument::REQUIRED);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $name = $input->getArgument('name');
+        $name = $input->getArgument('table_name');
+        $fileName = '';
 
-        $fileName = date('Y_m_d_His') . '_' . $name;
-
-        if (str_contains($name, 'create_table_'))
+        if (str_contains($name, 'create_table_')) {
             $name = str_replace('create_table_', '', $name);
+            $fileName = date('Y_m_d_His') . '_' . $name;
+        } else {
+            $fileName = date('Y_m_d_His') . '_create_table_' . $name;
+        }
 
         $replaces = ['table_name' => $name];
 
