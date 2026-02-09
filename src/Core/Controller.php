@@ -14,7 +14,22 @@ class Controller
 
     public function index(\WP_REST_Request $request)
     {
-        return $this->send($this->model::all());
+        $params = $this->getParams($request);
+
+        $page = isset($params['page']) ? intval($params['page']) : 1;
+        $perPage = isset($params['perPage']) ? intval($params['perPage']) : 10;
+
+        if ($perPage == -1)
+            return $this->send($this->model::all());
+
+        $query = $this->model::newQuery();
+
+        if (isset($params['id']))
+            return $this->getById($params['id']);
+
+        $query = $this->sanitizeFilters($query, $params);
+
+        return $this->pagedData($query, $page, $perPage);
     }
 
     public function create(\WP_REST_Request $request)
@@ -63,5 +78,20 @@ class Controller
         $model = $this->model::where('id', $id)->get();
 
         return sizeof($model) > 0 ? $model[0] : null;
+    }
+
+    protected function sanitizeFilters(\Illuminate\Database\Eloquent\Builder $query, array $filter)
+    {
+        return $query;
+    }
+
+    protected function pagedData(\Illuminate\Database\Eloquent\Builder $query, $page, $perPage)
+    {
+        return [
+            'page' => $page,
+            'perPage' => $perPage,
+            'totalItems' => $query->paginate(perPage: $perPage, page: $page)->total(),
+            'data' => $query->paginate(perPage: $perPage, page: $page)->getCollection(),
+        ];
     }
 }
