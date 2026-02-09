@@ -22,7 +22,7 @@ class CreateEntityCommand extends Command
     {
         $this->setDescription('Create a new entity');
         $this->addArgument('name', InputArgument::REQUIRED);
-        $this->addArgument('table_name', InputArgument::REQUIRED);
+        $this->addArgument('tableName', InputArgument::REQUIRED);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
