@@ -21,6 +21,10 @@ final class Config
         return require $this->rootPath . '/config.php';
     }
 
+    public function getUploadDirPath() {
+        return $this->rootPath . '/upload';
+    }
+
     public function getControllerDirPath()
     {
         return $this->rootPath . '/app/Http/Controller';

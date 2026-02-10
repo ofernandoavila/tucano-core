@@ -1,6 +1,6 @@
 {
     "name": "ofernandoavila/tucano-core",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Simple tools to help you create awesome wordpress plugins.",
     "type": "library",
     "license": "MIT",
@@ -18,7 +18,6 @@
     ],
     "require": {
         "illuminate/database": "^12.43",
-        "vlucas/phpdotenv": "^5.6",
         "illuminate/events": "^12.47",
         "ramsey/uuid": "^4.9",
         "illuminate/pagination": "^12.46",

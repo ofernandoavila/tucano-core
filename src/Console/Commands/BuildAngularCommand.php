@@ -37,7 +37,7 @@ class BuildAngularCommand extends Command
         shell_exec("cd " . $dist . " && mv *.css " . $this->rootPath . "/assets/css/");
 
         if (file_exists($dist . '/media')) {
-            shell_exec("cd " . $dist . " && mv ./media " . $this->rootPath . "/assets/media/");
+            shell_exec("cd " . $dist . " && rm -rf " . $this->rootPath . "/assets/css/media && mv ./media " . $this->rootPath . "/assets/css");
         }
 
         return Command::SUCCESS;

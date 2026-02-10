@@ -2,8 +2,6 @@
 
 namespace Ofernandoavila\TucanoCore\Core;
 
-use Dotenv\Dotenv;
-
 class Core
 {
     public Container $container;
@@ -12,9 +10,6 @@ class Core
     public function __construct(
         private readonly string $rootPath
     ) {
-        $dotenv = Dotenv::createImmutable($this->rootPath);
-        $dotenv->load();
-
         $config = new Config($this->rootPath);
 
         $this->container = new Container();
