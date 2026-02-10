@@ -45,7 +45,12 @@ class Factory
             add_action('wp_enqueue_scripts', function () {
                 wp_localize_script('jquery', $this->config->getWebComponentsConfig()['global_js_variable'], $this->jsVars);
             }, 1);
+
+            add_action('admin_enqueue_scripts', function () {
+                wp_localize_script('jquery', $this->config->getWebComponentsConfig()['global_js_variable'], $this->jsVars);
+            }, 1);
         }
+
 
         return $this;
     }
