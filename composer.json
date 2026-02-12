@@ -1,6 +1,6 @@
 {
     "name": "ofernandoavila/tucano-core",
-    "version": "1.0.13",
+    "version": "1.1.0",
     "description": "Simple tools to help you create awesome wordpress plugins.",
     "type": "library",
     "license": "MIT",
@@ -17,13 +17,13 @@
         }
     ],
     "require": {
-        "illuminate/database": "^12.43",
-        "illuminate/events": "^12.47",
         "ramsey/uuid": "^4.9",
-        "illuminate/pagination": "^12.46",
-        "illuminate/container": "^12.47",
-        "symfony/yaml": "^8.0",
-        "symfony/console": "^8.0"
+        "illuminate/container": "^8.0",
+        "illuminate/events": "^8.0",
+        "illuminate/database": "^8.0",
+        "illuminate/pagination": "^8.0",
+        "symfony/console": "^5.4",
+        "symfony/yaml": "^5.4"
     },
     "bin": [
         "bin/tucano"
