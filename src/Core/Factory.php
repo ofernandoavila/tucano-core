@@ -10,11 +10,11 @@ class Factory
 
     public function __construct(Container $container)
     {
-        $this->container = new Container();
+        $this->container = $container;
+        $this->config = $this->container->resolve(Config::class);
         $this->container->register(Router::class, fn() => new Router());
         $this->container->register(Database::class, fn() => new Database($this->container));
         $this->container->register(Migration::class, fn() => new Migration($this->container));
-        $this->config = $this->container->resolve(Config::class);
         $this->container->register(Factory::class, fn() => $this);
     }
     public function install()

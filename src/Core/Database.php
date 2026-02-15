@@ -4,7 +4,6 @@ namespace Ofernandoavila\TucanoCore\Core;
 
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Events\Dispatcher;
 use Ofernandoavila\TucanoCore\Core\Container as CoreContainer;
 
@@ -34,10 +33,7 @@ class Database
             'prefix'    => $config['table_prefix']
         ]);
 
-        $this->capsule->setEventDispatcher(
-            new Dispatcher(new Container)
-        );
-
+        $this->capsule->setEventDispatcher(new Dispatcher(new Container));
         $this->capsule->setAsGlobal();
         $this->capsule->bootEloquent();
     }

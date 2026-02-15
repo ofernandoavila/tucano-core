@@ -6,10 +6,10 @@ class Core
 {
     public Container $container;
     private Factory $factory;
+    private string $rootPath;
 
-    public function __construct(
-        private readonly string $rootPath
-    ) {
+    public function __construct(string $rootPath) {
+        $this->rootPath = $rootPath;
         $config = new Config($this->rootPath);
 
         $this->container = new Container();
@@ -38,7 +38,7 @@ class Core
         return (new Core($rootPath))->container->resolve(Factory::class)->uninstall();
     }
 
-    public function getRootPath() {
+    public function     getRootPath() {
         return $this->rootPath;
     }
 }
