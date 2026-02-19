@@ -47,6 +47,12 @@ class Factory
         }
         return $this;
     }
+
+    /**
+     * Add the router settings to the core
+     * 
+     * @return Factory $this
+     */
     private function addRouter()
     {
         if (\file_exists($this->config->getRoutesPath())) {
@@ -57,18 +63,30 @@ class Factory
         }
         return $this;
     }
+
+    /**
+     * Add the controllers to the core
+     * 
+     * @return Factory $this
+     */
     private function addControllers()
     {
         if (\file_exists($this->config->getControllerDirPath())) {
             $controllers = \array_filter(\scandir($this->config->getControllerDirPath()), fn($item) => $item != '.' && $item != '..');
             foreach ($controllers as $controller) {
-                $className = $this->getNamespace($this->config->getShortcodesDirPath() . '/' . $controller) . '\\' . explode('.', $controller)[0];
+                $className = $this->getNamespace($this->config->getControllerDirPath() . '/' . $controller) . '\\' . explode('.', $controller)[0];
                 $class = new $className($this->container);
                 $this->container->register($class::class, fn() => $class);
             }
         }
         return $this;
     }
+
+    /**
+     * Add the shotcodes to the core
+     * 
+     * @return Factory $this
+     */
     private function addShortcodes()
     {
         if (\file_exists($this->config->getShortcodesDirPath())) {
@@ -81,12 +99,24 @@ class Factory
         }
         return $this;
     }
+
+    /**
+     * Register a JS variable to use
+     * in the front-end. 
+     * 
+     * @return Factory $this
+     */
     public function addJSVar(string $chave, mixed $valor)
     {
         $this->jsVars[$chave] = $valor;
         return $this;
     }
 
+    /**
+     * Return the namespace of the given PHP file
+     * 
+     * @return string
+     */
     private function getNamespace(string $filePath): ?string
     {
         if (!is_file($filePath) || !is_readable($filePath))

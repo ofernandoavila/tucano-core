@@ -12,7 +12,7 @@ class File
             unlink($path);
 
         if (sizeof($data) > 0) {
-            foreach ($data as $key => $value) {
+            foreach ($data as $key => $value) { 
                 $template = str_replace('##{{' . strtoupper($key) . '}}##', $value, $template);
             }
         }
@@ -31,9 +31,7 @@ class File
     {
         $list = [];
 
-        $dir = array_filter(scandir($path), fn($item) => $item != '.' && $item != '..');
-
-        foreach ($dir as $key => $value) {
+        foreach (array_filter(scandir($path), fn($item) => $item != '.' && $item != '..') as $key => $value) {
             if (is_dir($path . '/' . $value))
                 $list = array_merge($list, File::listDir($path . '/' . $value));
 
