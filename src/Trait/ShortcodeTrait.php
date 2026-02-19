@@ -27,4 +27,8 @@ trait ShortcodeTrait
              ->Resolve(Factory::class)
              ->addJSVar($chave, $valor);
     }
+
+    protected function getAssetsPath() {
+        return str_replace('vendor/ofernandoavila/tucano-core/src/', '', plugin_dir_url(__DIR__)) . 'assets';
+    }
 }
