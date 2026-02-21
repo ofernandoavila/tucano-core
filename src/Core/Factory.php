@@ -2,6 +2,8 @@
 
 namespace Ofernandoavila\TucanoCore\Core;
 
+use Ofernandoavila\TucanoCore\Util\File;
+
 class Factory
 {
     private array $jsVars = [];
@@ -23,6 +25,13 @@ class Factory
              ->resolve(Migration::class)
              ->createMigrationTable()
              ->migrate();
+
+        $seeds = File::listDir($this->config->getSeedsPath());
+        
+        foreach ($seeds as $seed) {
+            $class = require $seed;
+            $class->seed();
+        }
     }
     public function uninstall()
     {

@@ -43,6 +43,8 @@ class Migration
                 self::remove($migrationName, $migration);
             }
         }
+
+        return $this;
     }
 
     private function apply(string $migration, mixed $migrationFile, string $version = '0.0.0')

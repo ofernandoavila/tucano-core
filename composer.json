@@ -1,6 +1,6 @@
 {
     "name": "ofernandoavila/tucano-core",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Simple tool to help you create awesome wordpress plugins.",
     "type": "library",
     "license": "MIT",
