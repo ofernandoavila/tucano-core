@@ -31,16 +31,16 @@ class Console extends Application
         $container->register(Config::class, fn() => $config);
         new Factory($container);
 
-        $this->addCommand(new InitCommand($this->rootPath, $container));
-        $this->addCommand(new BuildAngularCommand($this->rootPath, $container));
-        $this->addCommand(new CreateMigrationCommand($this->rootPath, $container));
-        $this->addCommand(new CreateShortcodeCommand($this->rootPath, $container));
-        $this->addCommand(new CreateSeedCommand($this->rootPath, $container));
-        $this->addCommand(new CreateModelCommand($this->rootPath, $container));
-        $this->addCommand(new CreateControllerCommand($this->rootPath, $container));
-        $this->addCommand(new CreateEntityCommand($this->rootPath, $container));
-        $this->addCommand(new DatabaseSeedCommand($this->rootPath, $container));
-        $this->addCommand(new DatabaseMigrateCommand($this->rootPath, $container));
-        $this->addCommand(new DatabaseRollbackCommand($this->rootPath, $container));
+        $this->add(new InitCommand($this->rootPath, $container));
+        $this->add(new BuildAngularCommand($this->rootPath, $container));
+        $this->add(new CreateMigrationCommand($this->rootPath, $container));
+        $this->add(new CreateShortcodeCommand($this->rootPath, $container));
+        $this->add(new CreateSeedCommand($this->rootPath, $container));
+        $this->add(new CreateModelCommand($this->rootPath, $container));
+        $this->add(new CreateControllerCommand($this->rootPath, $container));
+        $this->add(new CreateEntityCommand($this->rootPath, $container));
+        $this->add(new DatabaseSeedCommand($this->rootPath, $container));
+        $this->add(new DatabaseMigrateCommand($this->rootPath, $container));
+        $this->add(new DatabaseRollbackCommand($this->rootPath, $container));
     }
 }
